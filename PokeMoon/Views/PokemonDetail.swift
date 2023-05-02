@@ -9,43 +9,45 @@ import SwiftUI
 
 struct PokemonDetail: View {
     @StateObject private var vm = Vm()
+    
+    @State var pokemon: PokemonDetailData
     @State var hint : String = ""
     @State var showHint = false
     
     var body: some View {
         VStack {
-            Text(vm.pokemon.name.capitalized)
+            Text(pokemon.name.capitalized)
                 .bold()
                 .font(.title)
-            PokemonCarousel(pokemon: vm.pokemon)
+            PokemonCarousel(pokemon: pokemon)
             HStack {
-                Label(String("\(vm.pokemon.height*10) cm"),systemImage: "ruler")
+                Label(String("\(pokemon.height*10) cm"),systemImage: "ruler")
                     .foregroundColor(.blue)
                     .bold()
                     .font(.system(size: 20))
                     .onTapGesture {
-                        hint = "Altezza di \(vm.pokemon.name.capitalized)"
+                        hint = "Altezza di \(pokemon.name.capitalized)"
                         showHint = true
                     }
                     .alert(hint, isPresented: $showHint){
                         Button("OK", role: .cancel) {}
                     }
                 Spacer()
-                Label(String(format: "%.0f Kg",Float(vm.pokemon.weight)/10),systemImage: "scalemass")
+                Label(String(format: "%.0f Kg",Float(pokemon.weight)/10),systemImage: "scalemass")
                     .foregroundColor(.red)
                     .bold()
                     .font(.system(size: 20))
                     .onTapGesture {
-                        hint = "Peso di \(vm.pokemon.name.capitalized)"
+                        hint = "Peso di \(pokemon.name.capitalized)"
                         showHint = true
                     }
                 Spacer()
-                Label(String("\(vm.pokemon.baseExperience) Exp"),systemImage: "hand.thumbsdown")
+                Label(String("\(pokemon.baseExperience) Exp"),systemImage: "hand.thumbsdown")
                     .foregroundColor(.green)
                     .bold()
                     .font(.system(size: 20))
                     .onTapGesture {
-                        hint = "Punti esperienza che guadagni se sconfiggi  \(vm.pokemon.name.capitalized)"
+                        hint = "Punti esperienza che guadagni se sconfiggi  \(pokemon.name.capitalized)"
                         showHint = true
                     }
             }
@@ -70,29 +72,12 @@ struct PokemonDetail: View {
         .task {
             do {
                 print("pokemonDetail onappearing")
-                for item in vm.pokemon.heldItems {
-                    await getPokemonItem(itemUrl: item.item.url)
+                for item in pokemon.heldItems {
+                    await vm.getPokemonItem(itemUrl: item.item.url)
                 }
             }
         }
-    }
-    
-    func getPokemonItem(itemUrl: String) async {
-        guard let url = URL(string: itemUrl) else {
-            print("\(itemUrl) is not a valid URL")
-            return
-        }
-        let data: Data
-        do{
-            (data,_) = try await URLSession.shared.data(from: url)
-            if let decodedData = try? JSONDecoder().decode(ItemDetail.self, from: data) {
-                /*return itemDetail*/
-                self.itemsDetail.append(decodedData)
-            }
-        } catch {
-            print("Error fetching data")
-        }
-    }
+    }    
 }
 
 struct PokemonCarousel: View {
