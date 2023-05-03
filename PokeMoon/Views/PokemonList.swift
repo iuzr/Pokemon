@@ -14,15 +14,10 @@ struct PokemonList: View {
         NavigationStack {
             List {
                 Text("\(viewModel.totalPokemons) found")
-                ForEach(viewModel.pokemons.sorted{$0.id < $1.id}) { pokemon in
-                    NavigationLink (destination: PokemonDetail(pokemon: pokemon)) {
+                ForEach(viewModel.pokemons) { pokemon in
+                    NavigationLink (destination: PokemonDetail(pokemonUrl: pokemon.url)) {
                         PokemonItem(pokemon: pokemon)
-                        /*.onAppear {
-                         // print("onappear")
-                         Task{
-                         await viewModel.loadMorePokemon(pokemon: pokemon)
-                         }
-                         }*/
+                        
                     }
                 }
                 if(viewModel.page < viewModel.totalPages ){
@@ -38,7 +33,7 @@ struct PokemonList: View {
             .navigationTitle("Pokemon")
         }
         .task {
-            print("appearing task")
+            print("appearing task (\(viewModel.pokemons.count))")
             if(viewModel.pokemons.count == 0) {
                 do {
                     try await viewModel.fetchData()
@@ -51,18 +46,21 @@ struct PokemonList: View {
 }
 
 struct PokemonItem: View {
-    let pokemon: PokemonDetailData
+    let pokemon: Pokemon
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: pokemon.sprites.frontDefault), scale: 2) { image in image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 70, height: 70)
-                    .clipped()
-            } placeholder: { ProgressView().progressViewStyle(.circular) }
+            // FIXME: Not all images are rendered
+            if let img = pokemon.image {
+                AsyncImage(url: URL(string: img), scale: 2) { image in image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 70, height: 70)
+                        .clipped()
+                } placeholder: { ProgressView().progressViewStyle(.circular) }
+            }
             // Spacer()
-            Text(pokemon.name.capitalized + " (\(pokemon.id))")
+            Text(pokemon.name.capitalized)
                 .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }

@@ -16,13 +16,18 @@ import Foundation
 struct Welcome: Codable {
     let count: Int
     let next: String
-    let results: [Pokemon]
+    var results: [Pokemon]
 }
 
 // MARK: - Result
 struct Pokemon: Codable {
     let name: String
     let url: String
+    var image: String?
+    
+    enum codingKeys: String, CodingKey {
+        case name, url
+    }
 }
 
 extension Pokemon: Identifiable {

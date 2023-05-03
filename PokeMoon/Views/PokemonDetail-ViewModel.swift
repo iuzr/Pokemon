@@ -30,5 +30,17 @@ extension PokemonDetail {
             }
         }
         
+        /// Gets pokemon details
+        /// - Parameter pokemonUrl: endpoint url
+        /// - Returns: pokemon detail model
+        func getPokemonDetailData(pokemonUrl: String) async throws -> PokemonDetailData?{
+            guard let url = URL(string: pokemonUrl) else { return nil}
+            let urlRequest = URLRequest(url: url)
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data in getPokemonDetailData") }
+            let decodedData = try JSONDecoder().decode(PokemonDetailData.self, from: data)
+            // self.pokemons.append(decodedData)
+            return decodedData
+        }
     }
 }
