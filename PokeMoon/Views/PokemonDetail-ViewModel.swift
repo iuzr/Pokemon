@@ -30,16 +30,22 @@ extension PokemonDetail {
             }
         }
         
+        // FIXME: Se ho cliccato si un pokemon senza foto che deriva da una ricerca, restituisce nil
         /// Gets pokemon details
         /// - Parameter pokemonUrl: endpoint url
         /// - Returns: pokemon detail model
         func getPokemonDetailData(pokemonUrl: String) async throws -> PokemonDetailData?{
-            guard let url = URL(string: pokemonUrl) else { return nil}
+            guard let url = URL(string: pokemonUrl) else {
+                print("url non valido")
+                return nil
+            }
+            print("url ok")
             let urlRequest = URLRequest(url: url)
             let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            print("request ok")
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data in getPokemonDetailData") }
             let decodedData = try JSONDecoder().decode(PokemonDetailData.self, from: data)
-            // self.pokemons.append(decodedData)
+            print(decodedData)
             return decodedData
         }
     }

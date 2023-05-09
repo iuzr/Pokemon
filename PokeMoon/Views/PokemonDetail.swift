@@ -17,7 +17,7 @@ struct PokemonDetail: View {
     let pokemonUrl : String
     
     var body: some View {
-        VStack {
+       VStack {
             if let pokemon = pokemon {
                 Text(pokemon.name.capitalized)
                     .bold()
@@ -61,14 +61,6 @@ struct PokemonDetail: View {
                     .bold()
                 ItemsCarousel(itemsDetail: vm.itemsDetail)
                 Spacer()
-                HStack(){
-                    Button("Prev"){
-                        // getPrevPokemon
-                    }
-                    Spacer()
-                    Button("Next"){
-                    }
-                }
             } else {
                 Text("Not found")
             }
@@ -76,14 +68,16 @@ struct PokemonDetail: View {
         .padding()
         .task {
             do {
-                print("pokemonDetail onappearing")
-                pokemon = try! await vm.getPokemonDetailData(pokemonUrl: pokemonUrl)!
+                print("pokemonDetail onappearing for \(pokemonUrl)")
+                pokemon = try await vm.getPokemonDetailData(pokemonUrl: pokemonUrl)
                 
                 if let pokemon = pokemon {
                     for item in pokemon.heldItems {
                         await vm.getPokemonItem(itemUrl: item.item.url)
                     }
                 }
+            } catch {
+                print("catch error")
             }
         }
     }    

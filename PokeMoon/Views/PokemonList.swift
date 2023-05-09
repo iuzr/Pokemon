@@ -13,30 +13,32 @@ struct PokemonList: View {
     var body: some View {
         NavigationStack {
             List {
-                Text("\(viewModel.totalPokemons) found")
-                ForEach(viewModel.pokemons) { pokemon in
+                // FIXME: Se scrollo velocemente non carica le foto e se clicco va in errore
+                Text("\(viewModel.searchText.isEmpty ? viewModel.pokemons.count :  viewModel.filterPokemons().count) found")
+                ForEach(viewModel.filterPokemons()) { pokemon in
                     NavigationLink (destination: PokemonDetail(pokemonUrl: pokemon.url)) {
                         PokemonItem(pokemon: pokemon)
-                        
+                            .onAppear{
+                                Task{
+                                    try await viewModel.setPokemonImg(pokemonUrl: pokemon.url, pokemon: pokemon)
+                                }
+                            }
+                            .environmentObject(viewModel)
                     }
                 }
-                if(viewModel.page < viewModel.totalPages ){
-                    ProgressView().progressViewStyle(.circular)
-                        .onAppear{
-                            Task{
-                                viewModel.page += 1
-                                try? await viewModel.fetchData()
-                            }
-                        }
-                }
+                ProgressView().progressViewStyle(.circular)
+                    .task {
+                        viewModel.limit += 20
+                        print("now limit is \(viewModel.limit)")
+                    }
             }
             .navigationTitle("Pokemon")
         }
+        .searchable(text: $viewModel.searchText, prompt: "Cerca pokemon")
         .task {
-            print("appearing task (\(viewModel.pokemons.count))")
             if(viewModel.pokemons.count == 0) {
                 do {
-                    try await viewModel.fetchData()
+                    try await viewModel.cachesAllPokemons()
                 } catch {
                     print("Errore")
                 }
@@ -45,8 +47,10 @@ struct PokemonList: View {
     }
 }
 
+@MainActor
 struct PokemonItem: View {
-    let pokemon: Pokemon
+    @EnvironmentObject var viewModel: ViewModel
+    var pokemon: Pokemon
     
     var body: some View {
         HStack {
@@ -60,9 +64,13 @@ struct PokemonItem: View {
                 } placeholder: { ProgressView().progressViewStyle(.circular) }
             }
             // Spacer()
-            Text(pokemon.name.capitalized)
-                .font(.title)
+            VStack {
+                Text(pokemon.name.capitalized)
+                    .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                Text(pokemon.url)
+                    .font(.footnote)
+            }
         }
     }
 }

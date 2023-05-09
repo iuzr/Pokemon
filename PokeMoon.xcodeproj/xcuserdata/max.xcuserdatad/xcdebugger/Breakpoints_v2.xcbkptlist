@@ -3,4 +3,473 @@
    uuid = "C492B049-50DF-42BF-832E-33187FB75CEC"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "4ED39187-A34C-4FDA-93A0-9DB136B458BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "130CFD3F-3F5E-4435-B457-A4DE658FF606"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonList-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "cachesAllPokemons()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "130CFD3F-3F5E-4435-B457-A4DE658FF606 - d91bd4cd375b32b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.cachesAllPokemons() async throws -&gt; ()"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "130CFD3F-3F5E-4435-B457-A4DE658FF606 - 91b868bb65c24976"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.cachesAllPokemons() async throws -&gt; ()"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "130CFD3F-3F5E-4435-B457-A4DE658FF606 - d91bd4cd375b32b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.cachesAllPokemons() async throws -&gt; ()"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "552B6ADE-73E0-4843-A5B6-17923592B686"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonList-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "setPokemonImg(pokemonUrl:pokemon:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - 56d45b2b743cc831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "512">
+               </Location>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - 13b674dda875114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - 13b674dda875114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - a989923ac1dc9516"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1956">
+               </Location>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - 56d45b2b743cc831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "552B6ADE-73E0-4843-A5B6-17923592B686 - a989923ac1dc9516"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "2836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "320F4E1C-EE13-49DD-9A9E-990E82C0DE9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonList-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setPokemonImg(pokemonUrl:pokemon:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "320F4E1C-EE13-49DD-9A9E-990E82C0DE9B - 13b674dda875190"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "872">
+               </Location>
+               <Location
+                  uuid = "320F4E1C-EE13-49DD-9A9E-990E82C0DE9B - 13b674dda875190"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "976">
+               </Location>
+               <Location
+                  uuid = "320F4E1C-EE13-49DD-9A9E-990E82C0DE9B - 13b674dda875190"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.ViewModel.setPokemonImg(pokemonUrl: Swift.String, pokemon: PokeMoon.Pokemon) async throws -&gt; Swift.Optional&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AE9670F-158A-4AD0-BAD9-73BD7A41CD74"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonList-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "filterPokemons()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6AE9670F-158A-4AD0-BAD9-73BD7A41CD74 - df1c127ff3bfaa2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.filterPokemons() -&gt; Swift.Array&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "6AE9670F-158A-4AD0-BAD9-73BD7A41CD74 - df1c127ff3bfaa2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.ViewModel.filterPokemons() -&gt; Swift.Array&lt;PokeMoon.Pokemon&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonList-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getPokemonDetailData(pokemonUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - fb4aa780aecede52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - 957e58795fa5b963"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - 957e58795fa5b963"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "904">
+               </Location>
+               <Location
+                  uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - e548416eafbcf565"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "2136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8375A6B5-E4CF-4BE7-A328-9B2F8ECEDAB3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getPokemonDetailData(pokemonUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E44C861-509E-43DF-AFDE-B8186009A261"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getPokemonDetailData(pokemonUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 957e58795fa5b604"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 6f73c24e306fca00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - e548416eafbcfa02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 22bd35e867bf6001"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
+                  moduleName = "PokeMoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

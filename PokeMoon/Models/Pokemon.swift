@@ -15,12 +15,12 @@ import Foundation
 // MARK: - Welcome
 struct Welcome: Codable {
     let count: Int
-    let next: String
+    let next: String?
     var results: [Pokemon]
 }
 
 // MARK: - Result
-struct Pokemon: Codable {
+struct Pokemon: Codable, Equatable {
     let name: String
     let url: String
     var image: String?
