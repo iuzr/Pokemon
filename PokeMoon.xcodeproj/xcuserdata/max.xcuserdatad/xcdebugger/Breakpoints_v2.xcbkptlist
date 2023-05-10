@@ -309,10 +309,10 @@
             filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "getPokemonDetailData(pokemonUrl:)"
-            landmarkType = "7">
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "Vm"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - fb4aa780aecede52"
@@ -373,100 +373,6 @@
                   startingLineNumber = "37"
                   endingLineNumber = "37"
                   offsetFromSymbolStart = "2136">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8375A6B5-E4CF-4BE7-A328-9B2F8ECEDAB3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "getPokemonDetailData(pokemonUrl:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E44C861-509E-43DF-AFDE-B8186009A261"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PokeMoon/Views/PokemonDetail-ViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getPokemonDetailData(pokemonUrl:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 957e58795fa5b604"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
-                  moduleName = "PokeMoon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 6f73c24e306fca00"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
-                  moduleName = "PokeMoon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - e548416eafbcfa02"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
-                  moduleName = "PokeMoon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "8E44C861-509E-43DF-AFDE-B8186009A261 - 22bd35e867bf6001"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for PokeMoon.PokemonDetail.Vm.getPokemonDetailData(pokemonUrl: Swift.String) async throws -&gt; Swift.Optional&lt;PokeMoon.PokemonDetailData&gt;"
-                  moduleName = "PokeMoon"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/max/Projects/Swift/PokeMoon/PokeMoon/Views/PokemonDetail-ViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>

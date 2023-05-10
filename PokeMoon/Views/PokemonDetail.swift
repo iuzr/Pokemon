@@ -45,7 +45,7 @@ struct PokemonDetail: View {
                             showHint = true
                         }
                     Spacer()
-                    Label(String("\(pokemon.baseExperience) Exp"),systemImage: "hand.thumbsdown")
+                    Label(String("\(pokemon.baseExperience ?? 0) Exp"),systemImage: "hand.thumbsdown")
                         .foregroundColor(.green)
                         .bold()
                         .font(.system(size: 20))
@@ -89,10 +89,28 @@ struct PokemonCarousel: View {
     var body: some View {
         VStack{
             TabView {
-                PokemonAnimatedGif(urlString: pokemon.sprites.versions?.generationV.blackWhite.animated?.frontDefault ?? pokemon.sprites.frontDefault)
-                PokemonAnimatedGif(urlString: pokemon.sprites.versions?.generationV.blackWhite.animated?.backDefault ?? pokemon.sprites.backDefault)
-                PokemonAnimatedGif(urlString: pokemon.sprites.versions?.generationV.blackWhite.animated?.frontShiny ?? pokemon.sprites.frontShiny)
-                PokemonAnimatedGif(urlString: pokemon.sprites.versions?.generationV.blackWhite.animated?.backShiny ?? pokemon.sprites.backShiny)
+                if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.frontDefault {
+                    PokemonAnimatedGif(urlString: img)
+                } else {
+                    // TODO: se non ha immagine animate mettere placeholder o nua immagine fissa
+//                    if let img = pokemon.image {
+//                        AsyncImage(url: URL(string: img), scale: 2) { image in image
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fill)
+//                                .frame(width: 70, height: 70)
+//                                .clipped()
+//                        } placeholder: { ProgressView().progressViewStyle(.circular) }
+//                    }
+                }
+                if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.backDefault {
+                    PokemonAnimatedGif(urlString: img)
+                }
+                if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.frontShiny {
+                    PokemonAnimatedGif(urlString: img )
+                }
+                if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.backShiny {
+                    PokemonAnimatedGif(urlString: img)
+                }
             }
             .tabViewStyle(.page)
         }
@@ -162,7 +180,7 @@ struct HeldItems: View {
 
 struct PokemonDetail_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonDetail(pokemonUrl : "https://pokeapi.co/api/v2/pokemon/12")
+        PokemonDetail(pokemonUrl : "https://pokeapi.co/api/v2/pokemon/1004/")
     }
 }
 
