@@ -164,6 +164,10 @@ struct Stat: Codable {
     }
 }
 
+extension Stat: Identifiable {
+    var id: UUID {return UUID()}
+}
+
 class JSONCodingKey: CodingKey {
     let key: String
 

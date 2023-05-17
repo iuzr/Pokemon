@@ -311,8 +311,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "Vm"
-            landmarkType = "3">
+            landmarkName = "getPokemonDetailData(pokemonUrl:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "FF1C567F-2FBF-4615-B775-53267090D7C7 - fb4aa780aecede52"

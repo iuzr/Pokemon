@@ -13,7 +13,6 @@ struct PokemonList: View {
     var body: some View {
         NavigationStack {
             List {
-                // FIXME: Se scrollo velocemente non carica le foto e se clicco va in errore
                 Text("\(viewModel.searchText.isEmpty ? viewModel.pokemons.count :  viewModel.filterPokemons().count) found")
                 ForEach(viewModel.filterPokemons()) { pokemon in
                     NavigationLink (destination: PokemonDetail(pokemonUrl: pokemon.url)) {
@@ -68,8 +67,6 @@ struct PokemonItem: View {
                 Text(pokemon.name.capitalized)
                     .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                Text(pokemon.url)
-                    .font(.footnote)
             }
         }
     }

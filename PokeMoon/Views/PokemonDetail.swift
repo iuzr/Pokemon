@@ -17,70 +17,82 @@ struct PokemonDetail: View {
     let pokemonUrl : String
     
     var body: some View {
-       VStack {
-            if let pokemon = pokemon {
-                Text(pokemon.name.capitalized)
-                    .bold()
-                    .font(.title)
-                PokemonCarousel(pokemon: pokemon)
-                HStack {
-                    Label(String("\(pokemon.height*10) cm"),systemImage: "ruler")
-                        .foregroundColor(.blue)
-                        .bold()
-                        .font(.system(size: 20))
-                        .onTapGesture {
-                            hint = "Altezza di \(pokemon.name.capitalized)"
-                            showHint = true
-                        }
-                        .alert(hint, isPresented: $showHint){
-                            Button("OK", role: .cancel) {}
-                        }
-                    Spacer()
-                    Label(String(format: "%.0f Kg",Float(pokemon.weight)/10),systemImage: "scalemass")
-                        .foregroundColor(.red)
-                        .bold()
-                        .font(.system(size: 20))
-                        .onTapGesture {
-                            hint = "Peso di \(pokemon.name.capitalized)"
-                            showHint = true
-                        }
-                    Spacer()
-                    Label(String("\(pokemon.baseExperience ?? 0) Exp"),systemImage: "hand.thumbsdown")
-                        .foregroundColor(.green)
-                        .bold()
-                        .font(.system(size: 20))
-                        .onTapGesture {
-                            hint = "Punti esperienza che guadagni se sconfiggi  \(pokemon.name.capitalized)"
-                            showHint = true
-                        }
-                }
-                .padding(.vertical)
-                Spacer()
-                Text(vm.itemsDetail.count > 0 ? "Oggetti posseduti" : "Nessun oggetto posseduto")
-                    .font(.title2)
-                    .bold()
-                ItemsCarousel(itemsDetail: vm.itemsDetail)
-                Spacer()
-            } else {
-                Text("Not found")
-            }
-        }
-        .padding()
-        .task {
-            do {
-                print("pokemonDetail onappearing for \(pokemonUrl)")
-                pokemon = try await vm.getPokemonDetailData(pokemonUrl: pokemonUrl)
-                
+        NavigationView {
+            VStack {
                 if let pokemon = pokemon {
-                    for item in pokemon.heldItems {
-                        await vm.getPokemonItem(itemUrl: item.item.url)
+                    /*Text(pokemon.name.capitalized)
+                        .bold()
+                        .font(.title)*/
+                    PokemonCarousel(pokemon: pokemon)
+                    HStack {
+                        Label(String("\(pokemon.height*10) cm"),systemImage: "ruler")
+                            .foregroundColor(.blue)
+                            .bold()
+                            .font(.system(size: 20))
+                            .onTapGesture {
+                                hint = "Altezza di \(pokemon.name.capitalized)"
+                                showHint = true
+                            }
+                            .alert(hint, isPresented: $showHint){
+                                Button("OK", role: .cancel) {}
+                            }
+                        Spacer()
+                        Label(String(format: "%.0f Kg",Float(pokemon.weight)/10),systemImage: "scalemass")
+                            .foregroundColor(.red)
+                            .bold()
+                            .font(.system(size: 20))
+                            .onTapGesture {
+                                hint = "Peso di \(pokemon.name.capitalized)"
+                                showHint = true
+                            }
+                        Spacer()
+                        Label(String("\(pokemon.baseExperience ?? 0) Exp"),systemImage: "hand.thumbsdown")
+                            .foregroundColor(.green)
+                            .bold()
+                            .font(.system(size: 20))
+                            .onTapGesture {
+                                hint = "Punti esperienza che guadagni se sconfiggi  \(pokemon.name.capitalized)"
+                                showHint = true
+                            }
                     }
+                    .padding(.vertical)
+                    Spacer()
+                    NavigationLink(destination: PokemonStats(pokemon: pokemon)){
+                        Text("Stats")
+                            .padding()
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(15)
+                    }
+                    Spacer()
+                    Text(vm.itemsDetail.count > 0 ? "Oggetti posseduti" : "Nessun oggetto posseduto")
+                        .font(.title2)
+                        .bold()
+                    ItemsCarousel(itemsDetail: vm.itemsDetail)
+                    Spacer()
+                } else {
+                    Text("Not found")
                 }
-            } catch {
-                print("catch error")
             }
+            .navigationTitle(pokemon?.name.capitalized ?? "")
+            .padding()
+            .task {
+                do {
+                    print("pokemonDetail onappearing for \(pokemonUrl)")
+                    pokemon = try await vm.getPokemonDetailData(pokemonUrl: pokemonUrl)
+                    
+                    if let pokemon = pokemon {
+                        for item in pokemon.heldItems {
+                            await vm.getPokemonItem(itemUrl: item.item.url)
+                        }
+                    }
+                } catch {
+                    print("catch error")
+                }
         }
-    }    
+        }
+    }
 }
 
 struct PokemonCarousel: View {
@@ -92,15 +104,7 @@ struct PokemonCarousel: View {
                 if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.frontDefault {
                     PokemonAnimatedGif(urlString: img)
                 } else {
-                    // TODO: se non ha immagine animate mettere placeholder o nua immagine fissa
-//                    if let img = pokemon.image {
-//                        AsyncImage(url: URL(string: img), scale: 2) { image in image
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fill)
-//                                .frame(width: 70, height: 70)
-//                                .clipped()
-//                        } placeholder: { ProgressView().progressViewStyle(.circular) }
-//                    }
+                    PokemonStaticGif(pokemon: pokemon)
                 }
                 if let img = pokemon.sprites.versions?.generationV.blackWhite.animated?.backDefault {
                     PokemonAnimatedGif(urlString: img)
@@ -150,6 +154,28 @@ struct ItemsCarousel: View {
                     )
                 }
                 
+            }
+        }
+    }
+}
+
+struct PokemonStaticGif: View {
+    let pokemon: PokemonDetailData
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(Color.mint)
+                .frame(width: 200, height: 200)
+                .cornerRadius(100)
+            .padding()
+            if let img = pokemon.sprites.frontDefault {
+                AsyncImage(url: URL(string: img), scale: 2) { image in image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 170, height: 170)
+                        .clipped()
+                } placeholder: { ProgressView().progressViewStyle(.circular) }
             }
         }
     }
