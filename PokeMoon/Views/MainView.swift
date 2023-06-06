@@ -18,6 +18,10 @@ struct MainView: View {
                 .tabItem {
                     Label("Map", systemImage: "globe.europe.africa")
                 }
+            Settings()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 }
