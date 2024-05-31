@@ -12,11 +12,11 @@ struct MainView: View {
         TabView {
             PokemonList()
                 .tabItem {
-                    Label("Pokemon", systemImage: "teddybear")
+                    Label("Pokemon", systemImage: "fossil.shell")
                 }
-            Text("Map")
+            Text("Mazzo")
                 .tabItem {
-                    Label("Map", systemImage: "globe.europe.africa")
+                    Label("Mazzo", systemImage: "list.clipboard")
                 }
             Settings()
                 .tabItem {

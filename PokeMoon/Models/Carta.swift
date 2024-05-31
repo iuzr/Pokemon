@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Carta : Hashable {
+    var pokemonIndex: Int
+    var value: Float
+}

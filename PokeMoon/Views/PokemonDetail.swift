@@ -17,7 +17,6 @@ struct PokemonDetail: View {
     let pokemonUrl : String
     
     var body: some View {
-        NavigationView {
             VStack {
                 if let pokemon = pokemon {
                     /*Text(pokemon.name.capitalized)
@@ -76,6 +75,13 @@ struct PokemonDetail: View {
                 }
             }
             .navigationTitle(pokemon?.name.capitalized ?? "")
+            .toolbar {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "plus.circle.fill")
+                }
+            }
             .padding()
             .task {
                 do {
@@ -90,7 +96,6 @@ struct PokemonDetail: View {
                 } catch {
                     print("catch error")
                 }
-        }
         }
     }
 }

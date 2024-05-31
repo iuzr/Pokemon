@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct Mazzo: View {
+    @StateObject private var vm = MazzoViewModel()
+    
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ForEach(vm.carte, id: \.self) { carta in
+                Text( "\(carta.pokemonIndex)")
+                    .font(.largeTitle)
+            }
+        }
     }
 }
 

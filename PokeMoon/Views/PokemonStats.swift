@@ -11,9 +11,6 @@ struct PokemonStats: View {
     let pokemon: PokemonDetailData
     
     var body: some View {
-        
-        // FIXME: layout troppo in basso
-        
         VStack {
             Text("Stats")
                 .font(.title)
@@ -38,8 +35,10 @@ struct PokemonStats: View {
                     .padding(.leading)
                     .padding(.trailing)
                 }
+                Spacer()
             }
         }
+        .padding()
     }
 }
 

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct Settings: View {
-    @AppStorage("cardsNumber") private var cardsNumber = 5.0
+    @AppStorage("cardsNumber") var totalCards = 5.0
     
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Generali")) {
                     VStack {
-                        Text("Numero di carte: \(Int(cardsNumber))")
-                        Slider(value: $cardsNumber,
+                        Text("Numero di carte: \(Int(totalCards))")
+                        Slider(value: $totalCards,
                                in: 3...8,
                                step: 1.0) {
                             Text("Numero di carte")
